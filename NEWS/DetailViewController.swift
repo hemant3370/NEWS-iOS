@@ -46,7 +46,7 @@ class DetailViewController: UIViewController {
 
 }
 
-extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     //1
      func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -68,7 +68,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         //3
         cell.newsIV.kf.setImage(with: URL.init(string: article.urlToImage))
         cell.newsDetailLabel.text = article.descriptionField
-        
+        cell.titleLabel.text = article.title
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -76,9 +76,22 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let svc = SFSafariViewController(url: URL(string: article.url)! , entersReaderIfAvailable: true)
         self.present(svc, animated: true, completion: nil)
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        if Constants.isPad() {
+        let width:CGFloat = self.view.bounds.size.width*0.3;
+        let height:CGFloat = 350.0;
+        return CGSize(width: width, height: height)
+        }
+        else{
+            let width:CGFloat = self.view.bounds.size.width*0.9;
+            let height:CGFloat = 350.0;
+            return CGSize(width: width, height: height)
+        }
+    }
 }
 class newsCell : UICollectionViewCell {
     @IBOutlet weak var newsDetailLabel: UILabel!
     @IBOutlet weak var newsIV: UIImageView!
     
+    @IBOutlet weak var titleLabel: UILabel!
 }

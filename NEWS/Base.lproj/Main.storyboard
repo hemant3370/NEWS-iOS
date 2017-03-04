@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Master-->
+        <!--Channels-->
         <scene sceneID="pY4-Hu-kfo">
             <objects>
-                <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
+                <navigationController title="Channels" id="RMx-3f-FxP" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -54,18 +54,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="280" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elU-YV-IE9" customClass="CardView" customModule="NEWS" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="264" height="334"/>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elU-YV-IE9" customClass="CardView" customModule="NEWS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="350"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cgu-Dy-2Qd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="264" height="238"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="231"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="cgu-Dy-2Qd" secondAttribute="height" multiplier="10:9" id="TCe-4T-lob"/>
+                                                                <constraint firstAttribute="width" secondItem="cgu-Dy-2Qd" secondAttribute="height" multiplier="10:9" constant="23.333333333333314" id="TCe-4T-lob"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hU9-jS-FDy">
-                                                            <rect key="frame" x="8" y="238" width="248" height="96"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hU9-jS-FDy">
+                                                            <rect key="frame" x="8" y="293" width="264" height="57"/>
+                                                            <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cl-8x-muC">
+                                                            <rect key="frame" x="8" y="235" width="264" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="rdI-HO-18p"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -74,11 +83,14 @@
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="cgu-Dy-2Qd" secondAttribute="trailing" id="8Hp-NA-b2z"/>
                                                         <constraint firstItem="cgu-Dy-2Qd" firstAttribute="top" secondItem="elU-YV-IE9" secondAttribute="top" id="Aen-Lk-Vbd"/>
+                                                        <constraint firstItem="hU9-jS-FDy" firstAttribute="top" secondItem="0Cl-8x-muC" secondAttribute="bottom" constant="8" id="FLV-Tj-w4R"/>
+                                                        <constraint firstItem="0Cl-8x-muC" firstAttribute="leading" secondItem="elU-YV-IE9" secondAttribute="leading" constant="8" id="FTm-Oe-Dsk"/>
                                                         <constraint firstAttribute="trailing" secondItem="hU9-jS-FDy" secondAttribute="trailing" constant="8" id="Now-0T-bqP"/>
                                                         <constraint firstItem="hU9-jS-FDy" firstAttribute="leading" secondItem="elU-YV-IE9" secondAttribute="leading" constant="8" id="PRc-T4-ahR"/>
-                                                        <constraint firstItem="hU9-jS-FDy" firstAttribute="top" secondItem="cgu-Dy-2Qd" secondAttribute="bottom" id="V55-3P-jn1"/>
                                                         <constraint firstItem="cgu-Dy-2Qd" firstAttribute="leading" secondItem="elU-YV-IE9" secondAttribute="leading" id="hPg-Qt-OCc"/>
                                                         <constraint firstAttribute="bottom" secondItem="hU9-jS-FDy" secondAttribute="bottom" id="meX-5Z-biA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0Cl-8x-muC" secondAttribute="trailing" constant="8" id="wHm-Nf-IFH"/>
+                                                        <constraint firstItem="0Cl-8x-muC" firstAttribute="top" secondItem="cgu-Dy-2Qd" secondAttribute="bottom" constant="4" id="yvn-Y8-G9a"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -87,20 +99,29 @@
                                                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                             <color key="value" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="elU-YV-IE9" secondAttribute="bottom" constant="8" id="QwS-8e-pIy"/>
-                                            <constraint firstItem="elU-YV-IE9" firstAttribute="top" secondItem="8nD-BE-l56" secondAttribute="top" constant="8" id="bVv-lN-3GF"/>
-                                            <constraint firstAttribute="trailing" secondItem="elU-YV-IE9" secondAttribute="trailing" constant="8" id="htE-fv-PNh"/>
-                                            <constraint firstItem="elU-YV-IE9" firstAttribute="leading" secondItem="8nD-BE-l56" secondAttribute="leading" constant="8" id="zT2-gG-mth"/>
+                                            <constraint firstAttribute="bottom" secondItem="elU-YV-IE9" secondAttribute="bottom" id="QwS-8e-pIy"/>
+                                            <constraint firstItem="elU-YV-IE9" firstAttribute="top" secondItem="8nD-BE-l56" secondAttribute="top" id="bVv-lN-3GF"/>
+                                            <constraint firstAttribute="trailing" secondItem="elU-YV-IE9" secondAttribute="trailing" id="htE-fv-PNh"/>
+                                            <constraint firstItem="elU-YV-IE9" firstAttribute="leading" secondItem="8nD-BE-l56" secondAttribute="leading" id="zT2-gG-mth"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="newsDetailLabel" destination="hU9-jS-FDy" id="hLT-5Z-Y7P"/>
                                             <outlet property="newsIV" destination="cgu-Dy-2Qd" id="vRo-DD-Nut"/>
+                                            <outlet property="titleLabel" destination="0Cl-8x-muC" id="arx-ty-CdT"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -148,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="-856" y="-330"/>
         </scene>
-        <!--Master-->
+        <!--Channels-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="NEWS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Channels" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="NEWS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,7 +182,7 @@
                                 <rect key="frame" x="0.0" y="22" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="46c-D2-fG4">
@@ -238,6 +259,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>
