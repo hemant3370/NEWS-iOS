@@ -54,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54291A191E6AD86700F76242 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				5468A6DE1E66EF55009D23FE /* MasterViewController.swift */,
+				5468A6E01E66EF55009D23FE /* DetailViewController.swift */,
+			);
+			name = VCs;
+			sourceTree = "<group>";
+		};
 		5468A6D01E66EF55009D23FE = {
 			isa = PBXGroup;
 			children = (
@@ -75,13 +84,12 @@
 		5468A6DB1E66EF55009D23FE /* NEWS */ = {
 			isa = PBXGroup;
 			children = (
+				54291A191E6AD86700F76242 /* VCs */,
 				54E386691E6AA3AB00C1C998 /* Views */,
 				54E386661E6A9C1900C1C998 /* Models */,
 				54E386641E6A950200C1C998 /* AlertFactory.swift */,
 				54E3865E1E6A8D1900C1C998 /* WebUtil.swift */,
 				5468A6DC1E66EF55009D23FE /* AppDelegate.swift */,
-				5468A6DE1E66EF55009D23FE /* MasterViewController.swift */,
-				5468A6E01E66EF55009D23FE /* DetailViewController.swift */,
 				5468A6E21E66EF55009D23FE /* Main.storyboard */,
 				5468A6E51E66EF55009D23FE /* Assets.xcassets */,
 				5468A6E71E66EF55009D23FE /* LaunchScreen.storyboard */,

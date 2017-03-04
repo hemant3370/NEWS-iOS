@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     var newsSource : Source!
     func configureView() {
         // Update the user interface for the detail item.
-        
+    
     }
 
     override func viewDidLoad() {
@@ -42,7 +42,11 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    func readWholeStory(sender: UIBarButtonItem) {
+                let article = articles.articles[sender.tag]
+                let svc = SFSafariViewController(url: URL(string: article.url)! , entersReaderIfAvailable: true)
+                self.present(svc, animated: true, completion: nil)
+    }
 
 }
 
@@ -72,21 +76,30 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let article = articles.articles[indexPath.row]
-        let svc = SFSafariViewController(url: URL(string: article.url)! , entersReaderIfAvailable: true)
-        self.present(svc, animated: true, completion: nil)
+        collectionView.deselectItem(at: indexPath, animated: false)
+
+        let vc = UIViewController()
+        let contentView = (collectionView.cellForItem(at: indexPath)?.contentView.copyView())!
+        contentView.frame = CGRect(x: 30, y: 50, width: self.view.frame.width - 60, height: self.view.frame.height - 100)
+        vc.view.addSubview(contentView)
+        let wholeStory = UIBarButtonItem.init(title: "Full Story", style: .plain, target: self, action: #selector(DetailViewController.readWholeStory(sender:)))
+        wholeStory.tag = indexPath.row
+            vc.navigationItem.rightBarButtonItem = wholeStory
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         if Constants.isPad() {
-        let width:CGFloat = self.view.bounds.size.width*0.3;
-        let height:CGFloat = 350.0;
+        let width:CGFloat = self.view.bounds.size.width*0.45;
+            let height:CGFloat = self.view.bounds.size.height*0.45;
         return CGSize(width: width, height: height)
         }
         else{
             let width:CGFloat = self.view.bounds.size.width*0.9;
-            let height:CGFloat = 350.0;
+            let height:CGFloat = self.view.bounds.size.height*0.5;
             return CGSize(width: width, height: height)
         }
+        
     }
 }
 class newsCell : UICollectionViewCell {
