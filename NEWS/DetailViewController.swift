@@ -47,6 +47,17 @@ class DetailViewController: UIViewController {
                 let svc = SFSafariViewController(url: URL(string: article.url)! , entersReaderIfAvailable: true)
                 self.present(svc, animated: true, completion: nil)
     }
+    func share(sender : UIBarButtonItem){
+         let article = articles.articles[sender.tag]
+        let cell = collectionView.cellForItem(at: IndexPath.init(item: sender.tag, section: 0)) as! newsCell
+        let myShare = article.title + " Link: " + article.url
+        let image: UIImage = cell.newsIV.image?.copy() as! UIImage
+        
+        let shareVC: UIActivityViewController = UIActivityViewController(activityItems: [(image), myShare], applicationActivities: nil)
+        shareVC.popoverPresentationController?.sourceView = sender.value(forKey: "view") as! UIView?
+        shareVC.popoverPresentationController?.sourceRect = view.bounds
+        self.present(shareVC, animated: true, completion: nil)
+    }
 
 }
 
@@ -84,7 +95,9 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         vc.view.addSubview(contentView)
         let wholeStory = UIBarButtonItem.init(title: "Full Story", style: .plain, target: self, action: #selector(DetailViewController.readWholeStory(sender:)))
         wholeStory.tag = indexPath.row
-            vc.navigationItem.rightBarButtonItem = wholeStory
+        let shareStory = UIBarButtonItem.init(title: "Share", style: .plain, target: self, action: #selector(DetailViewController.share(sender:)))
+        shareStory.tag = indexPath.row
+            vc.navigationItem.rightBarButtonItems = [wholeStory,shareStory]
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

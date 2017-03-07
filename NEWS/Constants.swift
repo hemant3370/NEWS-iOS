@@ -13,7 +13,7 @@ class Constants: NSObject {
     struct UDKeys {
        static let sourcesKey = "NewsSources"
     }
-    static let apiKey = "7ad5d64e5f5143a4b95754fa64f15b15"
+    static let apiKey = "f2cfad5c330c44e0a489515972880675"
     static func isPad() -> Bool {
         
         return UIDevice.current.userInterfaceIdiom == .pad
