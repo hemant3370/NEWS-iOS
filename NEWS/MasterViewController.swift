@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
@@ -24,6 +25,8 @@ class MasterViewController: UITableViewController {
             self.sources = sources
             self.tableView.reloadData()
         }
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
 
     override func viewWillAppear(_ animated: Bool) {

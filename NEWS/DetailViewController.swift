@@ -36,6 +36,7 @@ class DetailViewController: UIViewController {
         }
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,7 +89,6 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
-
         let vc = UIViewController()
         let contentView = (collectionView.cellForItem(at: indexPath)?.contentView.copyView())!
         contentView.frame = CGRect(x: 30, y: 50, width: self.view.frame.width - 60, height: self.view.frame.height - 100)
@@ -109,7 +109,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
         else{
             let width:CGFloat = self.view.bounds.size.width*0.9;
-            let height:CGFloat = self.view.bounds.size.height*0.5;
+            let height:CGFloat = self.view.bounds.size.height*0.9;
             return CGSize(width: width, height: height)
         }
         
@@ -120,4 +120,5 @@ class newsCell : UICollectionViewCell {
     @IBOutlet weak var newsIV: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
+    
 }

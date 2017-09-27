@@ -11,4 +11,5 @@ target 'NEWS' do
     pod 'Alamofire', '~> 4.0'
   	pod 'SwiftyJSON'
   	pod 'Kingfisher', '~> 3.0'
+  	pod 'Hero'
 end

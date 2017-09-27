@@ -168,7 +168,7 @@
 				TargetAttributes = {
 					5468A6D81E66EF55009D23FE = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6TB68J96P4;
+						DevelopmentTeam = 4P4AWYR899;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -389,11 +389,11 @@
 			baseConfigurationReference = 7C3B3CB9DB639DD087914E68 /* Pods-NEWS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6TB68J96P4;
+				DEVELOPMENT_TEAM = 4P4AWYR899;
 				INFOPLIST_FILE = NEWS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hatchitup.NEWS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hemant.NEWS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -404,11 +404,11 @@
 			baseConfigurationReference = 14BBB397E58BB4F7C5B6213F /* Pods-NEWS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6TB68J96P4;
+				DEVELOPMENT_TEAM = 4P4AWYR899;
 				INFOPLIST_FILE = NEWS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hatchitup.NEWS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hemant.NEWS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

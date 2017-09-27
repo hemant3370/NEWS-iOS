@@ -14,19 +14,38 @@ class Sources: NSObject, NSCoding{
     
     var sources : [Source]!
     var status : String!
+    static let storageKey = "Sources"
     
     class func getSources(lang: String, completion: @escaping (Sources) -> Swift.Void){
+        if Sources.getSavedSources().sources.count > 0 {
+            completion(Sources.getSavedSources())
+        }
         Alamofire.request(Router.Sources(languageQuery.init(lang: lang).toDictionary() as! [String : AnyObject])).responseJSON { (response) in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
-                completion(Sources.init(fromJson: json))
+                let sources = Sources.init(fromJson: json)
+                Sources.saveSources(data: sources.sources)
+                completion(sources)
             case .failure(let error):
                 print(error)
                 completion(Sources())
             }
         }
+    }
+    
+    class func saveSources(data: [Source]){
+        let defaults = UserDefaults.standard
+        defaults.set(NSKeyedArchiver.archivedData(withRootObject: data), forKey: storageKey)
+        defaults.synchronize()
+    }
+    class func getSavedSources() -> Sources {
+        let defaults = UserDefaults.standard
+        if let data = defaults.value(forKey: storageKey) as? Data, let sources = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Source] {
+           return Sources(sources: sources)
+        }
+        return Sources()
     }
     /**
      * Instantiate the instance using the passed json values to set the properties values
@@ -35,6 +54,10 @@ class Sources: NSObject, NSCoding{
         super.init()
         sources = []
         status = "empty"
+    }
+    init(sources: [Source]) {
+        status = "saved"
+        self.sources = sources
     }
     init(fromJson json: JSON!){
         if json.isEmpty{

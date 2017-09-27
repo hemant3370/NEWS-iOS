@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -58,26 +57,32 @@
                                                     <rect key="frame" x="6" y="6" width="268" height="338"/>
                                                     <subviews>
                                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Kzv-xX-0fM">
-                                                            <rect key="frame" x="116" y="77.5" width="37" height="37"/>
+                                                            <rect key="frame" x="116" y="117.5" width="37" height="37"/>
                                                             <color key="color" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         </activityIndicatorView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cgu-Dy-2Qd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="268" height="190.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="cgu-Dy-2Qd" secondAttribute="height" multiplier="14:11" constant="25.454545454545467" id="Qq5-9m-XE2"/>
-                                                            </constraints>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="33" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cgu-Dy-2Qd">
+                                                            <rect key="frame" x="0.0" y="0.0" width="268" height="271.5"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="iv"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU9-jS-FDy">
-                                                            <rect key="frame" x="8" y="204.5" width="252" height="0.0"/>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU9-jS-FDy">
+                                                            <rect key="frame" x="8" y="309.5" width="252" height="24.5"/>
                                                             <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="detail"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cl-8x-muC">
-                                                            <rect key="frame" x="8" y="198.5" width="252" height="0.0"/>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cl-8x-muC">
+                                                            <rect key="frame" x="8" y="275.5" width="252" height="28"/>
                                                             <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="title"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,12 +92,13 @@
                                                         <constraint firstAttribute="trailing" secondItem="hU9-jS-FDy" secondAttribute="trailing" constant="8" id="8az-WX-rIB"/>
                                                         <constraint firstItem="cgu-Dy-2Qd" firstAttribute="top" secondItem="elU-YV-IE9" secondAttribute="top" id="Aen-Lk-Vbd"/>
                                                         <constraint firstItem="0Cl-8x-muC" firstAttribute="leading" secondItem="elU-YV-IE9" secondAttribute="leading" constant="8" id="FTm-Oe-Dsk"/>
+                                                        <constraint firstItem="0Cl-8x-muC" firstAttribute="top" secondItem="cgu-Dy-2Qd" secondAttribute="bottom" constant="4" id="M7Z-Vb-Tia"/>
                                                         <constraint firstItem="Kzv-xX-0fM" firstAttribute="centerX" secondItem="cgu-Dy-2Qd" secondAttribute="centerX" id="gC4-l3-pHd"/>
                                                         <constraint firstItem="hU9-jS-FDy" firstAttribute="leading" secondItem="elU-YV-IE9" secondAttribute="leading" constant="8" id="h2B-bG-qL3"/>
                                                         <constraint firstItem="cgu-Dy-2Qd" firstAttribute="leading" secondItem="elU-YV-IE9" secondAttribute="leading" id="hPg-Qt-OCc"/>
                                                         <constraint firstItem="hU9-jS-FDy" firstAttribute="top" secondItem="0Cl-8x-muC" secondAttribute="bottom" constant="6" id="u1p-pA-Vnz"/>
                                                         <constraint firstAttribute="trailing" secondItem="0Cl-8x-muC" secondAttribute="trailing" constant="8" id="wHm-Nf-IFH"/>
-                                                        <constraint firstItem="0Cl-8x-muC" firstAttribute="top" secondItem="cgu-Dy-2Qd" secondAttribute="bottom" constant="8" id="yvn-Y8-G9a"/>
+                                                        <constraint firstAttribute="bottom" secondItem="hU9-jS-FDy" secondAttribute="bottom" constant="4" id="zYW-wL-W8h"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -149,11 +155,95 @@
                     <connections>
                         <outlet property="activityIndicator" destination="LR5-Fb-MPE" id="NfR-qS-VBs"/>
                         <outlet property="collectionView" destination="hIm-sA-QzA" id="W2t-he-yBV"/>
+                        <segue destination="5No-VU-6sW" kind="show" identifier="todetail" action="showDetailViewController:sender:" id="QjK-ir-2Ip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="706.875" y="127.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bhp-j3-UAe">
+            <objects>
+                <viewController id="5No-VU-6sW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0PQ-1U-egv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qze-YR-5BU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NDL-iF-Ge0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKZ-lq-NcW">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <connections>
+                                    <segue destination="MKF-du-uHj" kind="embed" id="GGo-ck-Jig"/>
+                                </connections>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7mO-c4-I8q">
+                                <rect key="frame" x="0.0" y="64" width="320" height="202"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="iv"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkK-jL-Wsk" customClass="CardView" customModule="NEWS" customModuleProvider="target">
+                                <rect key="frame" x="6" y="272" width="308" height="202"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROH-7v-mW2">
+                                        <rect key="frame" x="8" y="8" width="292" height="28"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="title"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMT-Wq-e89">
+                                        <rect key="frame" x="8" y="44" width="292" height="24"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="detail"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ROH-7v-mW2" firstAttribute="leading" secondItem="zkK-jL-Wsk" secondAttribute="leading" constant="8" id="7Zn-Jq-i4K"/>
+                                    <constraint firstItem="TMT-Wq-e89" firstAttribute="top" secondItem="ROH-7v-mW2" secondAttribute="bottom" constant="8" id="Lsl-lP-E0x"/>
+                                    <constraint firstAttribute="trailing" secondItem="TMT-Wq-e89" secondAttribute="trailing" constant="8" id="Rr8-Fv-C5a"/>
+                                    <constraint firstItem="TMT-Wq-e89" firstAttribute="leading" secondItem="zkK-jL-Wsk" secondAttribute="leading" constant="8" id="i2a-4I-g9O"/>
+                                    <constraint firstAttribute="trailing" secondItem="ROH-7v-mW2" secondAttribute="trailing" constant="8" id="wR8-LT-eIa"/>
+                                    <constraint firstItem="ROH-7v-mW2" firstAttribute="top" secondItem="zkK-jL-Wsk" secondAttribute="top" constant="8" id="zQc-hG-bIP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IKZ-lq-NcW" firstAttribute="top" secondItem="0PQ-1U-egv" secondAttribute="bottom" id="7Gf-Ru-5AF"/>
+                            <constraint firstAttribute="trailing" secondItem="7mO-c4-I8q" secondAttribute="trailing" id="ATv-cw-Qtu"/>
+                            <constraint firstItem="zkK-jL-Wsk" firstAttribute="top" secondItem="7mO-c4-I8q" secondAttribute="bottom" constant="6" id="Arp-xO-RdT"/>
+                            <constraint firstItem="zkK-jL-Wsk" firstAttribute="leading" secondItem="NDL-iF-Ge0" secondAttribute="leading" constant="6" id="HQc-yE-yvF"/>
+                            <constraint firstItem="7mO-c4-I8q" firstAttribute="top" secondItem="0PQ-1U-egv" secondAttribute="bottom" id="N7r-So-gE1"/>
+                            <constraint firstItem="Qze-YR-5BU" firstAttribute="top" secondItem="zkK-jL-Wsk" secondAttribute="bottom" constant="6" id="Rfv-5M-Nmy"/>
+                            <constraint firstItem="IKZ-lq-NcW" firstAttribute="leading" secondItem="NDL-iF-Ge0" secondAttribute="leading" id="ak1-Hn-tk2"/>
+                            <constraint firstAttribute="trailing" secondItem="zkK-jL-Wsk" secondAttribute="trailing" constant="6" id="fUU-8p-XxG"/>
+                            <constraint firstItem="7mO-c4-I8q" firstAttribute="leading" secondItem="NDL-iF-Ge0" secondAttribute="leading" id="gDf-Ov-8Yc"/>
+                            <constraint firstItem="Qze-YR-5BU" firstAttribute="top" secondItem="IKZ-lq-NcW" secondAttribute="bottom" id="mPm-a4-vDS"/>
+                            <constraint firstAttribute="trailing" secondItem="IKZ-lq-NcW" secondAttribute="trailing" id="ttk-ks-p8Z"/>
+                            <constraint firstItem="zkK-jL-Wsk" firstAttribute="height" secondItem="7mO-c4-I8q" secondAttribute="height" id="wei-Vz-ZCX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X85-Co-oiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1451.25" y="115"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -189,22 +279,23 @@
                                             <rect key="frame" x="6" y="6" width="308" height="87.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="46c-D2-fG4">
-                                                    <rect key="frame" x="4" y="4" width="87.5" height="79.5"/>
+                                                    <rect key="frame" x="4" y="4" width="80" height="80"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="46c-D2-fG4" secondAttribute="height" multiplier="80:73" id="ikV-Jq-Mdg"/>
+                                                        <constraint firstAttribute="width" constant="80" id="CGk-jP-KRA"/>
+                                                        <constraint firstAttribute="height" constant="80" id="YBL-JI-akk"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXN-5s-shD">
-                                                    <rect key="frame" x="99.5" y="37" width="204.5" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="E9f-G6-it2"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXN-5s-shD">
+                                                    <rect key="frame" x="92" y="30" width="212" height="53.5"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-XE-ZQk">
-                                                    <rect key="frame" x="99.5" y="1" width="204.5" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-XE-ZQk">
+                                                    <rect key="frame" x="92" y="1" width="212" height="22.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22.5" id="GhM-Qw-4Yf"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -216,11 +307,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="gpe-XE-ZQk" secondAttribute="trailing" constant="4" id="DPG-cN-Leg"/>
                                                 <constraint firstAttribute="trailing" secondItem="nXN-5s-shD" secondAttribute="trailing" constant="4" id="EV4-uP-P1Z"/>
                                                 <constraint firstItem="46c-D2-fG4" firstAttribute="top" secondItem="l29-dO-5U3" secondAttribute="top" constant="4" id="Qic-Yz-Q4l"/>
-                                                <constraint firstAttribute="bottom" secondItem="nXN-5s-shD" secondAttribute="bottom" constant="0.10000000000000001" id="o1d-nR-q14"/>
+                                                <constraint firstAttribute="bottom" secondItem="nXN-5s-shD" secondAttribute="bottom" constant="4" id="hZI-hY-Zmw"/>
                                                 <constraint firstItem="46c-D2-fG4" firstAttribute="leading" secondItem="l29-dO-5U3" secondAttribute="leading" constant="4" id="of6-n7-uwR"/>
                                                 <constraint firstItem="gpe-XE-ZQk" firstAttribute="top" secondItem="l29-dO-5U3" secondAttribute="top" constant="1" id="rIx-jk-lKU"/>
                                                 <constraint firstItem="gpe-XE-ZQk" firstAttribute="leading" secondItem="46c-D2-fG4" secondAttribute="trailing" constant="8" id="ryS-4M-mKC"/>
-                                                <constraint firstAttribute="bottom" secondItem="46c-D2-fG4" secondAttribute="bottom" constant="4" id="wbJ-qf-fF2"/>
                                                 <constraint firstItem="nXN-5s-shD" firstAttribute="top" secondItem="gpe-XE-ZQk" secondAttribute="bottom" constant="6" id="z1A-f0-Gb7"/>
                                             </constraints>
                                         </view>
@@ -270,8 +360,38 @@
             </objects>
             <point key="canvasLocation" x="-45" y="129"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dOj-ZY-DmO">
+            <objects>
+                <viewController id="MKF-du-uHj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KRj-0i-pYv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ouc-oE-5iG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bxs-wO-1PL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nc-0E-S8R">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1nc-0E-S8R" secondAttribute="bottom" id="ADM-LY-Kaf"/>
+                            <constraint firstItem="1nc-0E-S8R" firstAttribute="top" secondItem="bxs-wO-1PL" secondAttribute="top" id="I0f-MX-2hw"/>
+                            <constraint firstAttribute="trailing" secondItem="1nc-0E-S8R" secondAttribute="trailing" id="iH1-vB-2tQ"/>
+                            <constraint firstItem="1nc-0E-S8R" firstAttribute="leading" secondItem="bxs-wO-1PL" secondAttribute="leading" id="yGr-OH-epE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJe-a7-yv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2255.625" y="127.5"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tll-UG-LXB"/>
+        <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>

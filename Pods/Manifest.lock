@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Hero (0.3.3)
+  - Kingfisher (3.5.1)
+  - RxCocoa (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxSwift (3.2.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - Hero
+  - Kingfisher (~> 3.0)
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Hero: bee4e762e84185b16a902dd11335c119515bb912
+  Kingfisher: 12eeffeef42ea45b68c5e5acfe8ba9005b713ab4
+  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
+  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: f6b8fa64dbc261853db73f3911f508d35640f1ad
+
+COCOAPODS: 1.2.0
